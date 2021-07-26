@@ -1,0 +1,12 @@
+<ng-template #header>
+  <hello name="{{ name }}"></hello>
+</ng-template>>
+
+
+<div *ngIf="highLightHeader else header">
+  <ng-container [ngTemplateOutlet]="header"></ng-container>
+</div>
+
+<button (click)="toggleHeader()"></button>
+
+Sample text
